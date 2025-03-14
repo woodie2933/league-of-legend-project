@@ -7,6 +7,9 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    backgroundImage: {
+      "home-bg": "url('../public/home-bg.jpg')",
+    },
     extend: {
       colors: {
         background: "var(--background)",

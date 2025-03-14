@@ -16,7 +16,7 @@ export default function RootLayout({
     <html lang="ko">
       <body className="bg-black text-white">
         <NavBar />
-        <main className="container mx-auto p-4">{children}</main>
+        <main className="container w-screen">{children}</main>
       </body>
     </html>
   );

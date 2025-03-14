@@ -1,3 +1,7 @@
 export default function RotationPage() {
-  return <h1>Rotation</h1>;
+  return (
+    <div className="w-screen h-screen flex justify-center items-center">
+      <h1>Rotation</h1>
+    </div>
+  );
 }

@@ -1,3 +1,7 @@
 export default function ItemsPage() {
-  return <h1>Items</h1>;
+  return (
+    <div className="w-screen h-screen flex justify-center items-center">
+      <h1>Items</h1>
+    </div>
+  );
 }
