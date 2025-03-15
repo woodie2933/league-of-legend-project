@@ -1,5 +1,9 @@
 /* 기본 css 스타일 (리셋 포함) */
 @tailwind base;
+/* 컴포넌트 스타일 - 사용자 정의 클래스 */
+/* @tailwind components; */
+/* 텍스트, 색상, 마진 등 유틸리티 클래스 */
+@tailwind utilities;
 
 * {
   margin: 0;
@@ -21,12 +25,6 @@ a {
   display: none;
 }
 
-/* 컴포넌트 스타일 - 사용자 정의 클래스 */
-/* @tailwind components; */
-
-/* 텍스트, 색상, 마진 등 유틸리티 클래스 */
-@tailwind utilities;
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -43,7 +41,7 @@ a {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-atkinson), sans-serif;
 }
 
 /* 사용자 정의 클래스 추가 */

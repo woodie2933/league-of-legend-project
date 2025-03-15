@@ -1,3 +1,5 @@
+import { Champion } from "@/types/Champion";
+
 const API_VERSION = "15.5.1";
 const CHAMPION_LIST_URL = `https://ddragon.leagueoflegends.com/cdn/${API_VERSION}/data/ko_KR/champion.json`;
 
