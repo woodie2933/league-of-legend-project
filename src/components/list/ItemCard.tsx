@@ -7,7 +7,7 @@ const ItemCard = ({ item }: { item: Item }) => {
   const itemImage = `https://ddragon.leagueoflegends.com/cdn/${API_VERSION}/img/item/${item.image.full}`;
 
   return (
-    <div className="w-60 p-4 flex flex-col justify-center items-center border border-neutral-700 rounded-xl hover:border-lime-400 hover:border-opacity-40 transition-all duration-300">
+    <div className="w-64 p-4 flex flex-col justify-center items-center border border-neutral-700 rounded-xl hover:border-lime-400 hover:border-opacity-40 transition-all duration-300">
       <Image
         className="rounded-md shadow-md shadow-slate-500"
         src={itemImage}

@@ -135,3 +135,9 @@ export type PassiveImage = {
   w: number;
   h: number;
 };
+
+export type ChampionDetailProps = {
+  params: {
+    id: string;
+  };
+};
