@@ -1,6 +1,6 @@
 export type Item = {
   name: string;
-  description: string;
+  plaintext: string;
   image: {
     full: string;
     w: number;

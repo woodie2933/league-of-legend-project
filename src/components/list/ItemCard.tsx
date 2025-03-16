@@ -7,11 +7,17 @@ const ItemCard = ({ item }: { item: Item }) => {
   const itemImage = `https://ddragon.leagueoflegends.com/cdn/${API_VERSION}/img/item/${item.image.full}`;
 
   return (
-    <div className="w-[300px] p-6 flex flex-col justify-center items-center">
-      <Image src={itemImage} alt={item.description} width={250} height={200} />
-      <div className="flex flex-col justify-center items-center">
-        <div className="text-lg font-semibold pt-5">{item.name}</div>
-        <div className="text-md font-semibold pt-2">{item.description}</div>
+    <div className="w-60 p-4 flex flex-col justify-center items-center border border-neutral-700 rounded-xl hover:border-lime-400 hover:border-opacity-40 transition-all duration-300">
+      <Image
+        className="rounded-md shadow-md shadow-slate-500"
+        src={itemImage}
+        alt={item.plaintext}
+        width={item.image.w}
+        height={item.image.h}
+      />
+      <div className="w-48 flex flex-col justify-center items-center pt-5">
+        <div className="text-md font-semibold">{item.name}</div>
+        <div className="text-sm font-medium pt-2">{item.plaintext}</div>
       </div>
     </div>
   );
