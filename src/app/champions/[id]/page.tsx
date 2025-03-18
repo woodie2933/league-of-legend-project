@@ -7,6 +7,7 @@ export default async function ChampionDetailPage({
 }: ChampionDetailProps) {
   const champion: ChampionDetail = await fetchChampionDetail(params.id);
   const championDetailImage = `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion.id}_1.jpg`;
+  const championPassiveImage = `https://ddragon.leagueoflegends.com/cdn/15.5.1/img/passive/${champion.passive.image.full}`;
 
   return (
     // 전체 wrapper
@@ -22,21 +23,21 @@ export default async function ChampionDetailPage({
         }}
       >
         {/* 챔피언 정보 wrapper */}
-        <div className="relative w-full h-full text-white flex flex-col justify-end gap-3 p-10">
+        <div className="relative w-full h-full text-white flex flex-col justify-end gap-3 p-12">
           {/* 그라데이션 필터 */}
           <div
-            className="absolute inset-0 rounded-3xl"
+            className="absolute inset-0 rounded-3xl pointer-events-none"
             style={{
               backgroundImage:
                 "linear-gradient(to top, #0e0e0e, transparent, transparent",
             }}
           ></div>
           {/* 챔피언 소개 */}
-          <div className="flex gap-14">
-            <div className="z-10 w-2/5 space-y-3">
-              <h1 className="text-4xl font-extrabold">{champion.name}</h1>
-              <h2 className="text-2xl font-bold">{champion.title}</h2>
-              <h3 className="text-md font-medium leading-tight text-justify pb-3">
+          <div className="flex justify-between gap-14">
+            <div className="z-10 w-3/6 space-y-3">
+              <h1 className="text-3xl font-extrabold">{champion.name}</h1>
+              <h2 className="text-xl font-bold">{champion.title}</h2>
+              <h3 className="text-md font-medium leading-snug text-justify pb-3">
                 {champion.lore}
               </h3>
               {/* 챔피언 태그 */}
@@ -78,12 +79,23 @@ export default async function ChampionDetailPage({
                 </div>
               </div>
             </div>
-            <div className="z-10 w-3/5 space-y-3">
-              <div>{champion.partype}</div>
-              <div className="flex gap-3">
+            <div className="z-10 w-3/6 space-y-3 flex justify-between items-end gap-10">
+              <div className="border border-s border-white border-opacity-30 rounded-lg flex flex-col items-center p-3">
+                <Image
+                  src={championPassiveImage}
+                  alt={champion.passive.name}
+                  width={170}
+                  height={170}
+                  className="border-2 rounded-2xl mb-3"
+                />
+                <h3 className="font-semibold text-md">
+                  {champion.passive.name}
+                </h3>
+              </div>
+              <div className="flex flex-col gap-3">
                 {champion.allytips.map((allytip) => (
                   <div
-                    key={champion.id}
+                    key={allytip}
                     className="items-center font-normal text-xs text-justify"
                   >
                     {allytip}
@@ -97,56 +109,3 @@ export default async function ChampionDetailPage({
     </div>
   );
 }
-
-// 능력치?
-// export type Spell = {
-//   id: string;
-//   name: string;
-//   description: string; // "아트록스가 대검을 내리쳐 물리 피해를 줍니다."
-//   tooltip: string; // "구체적으로 어떤 피해를 주는지 써있음"
-//   leveltip: Leveltip; // 아래에 선언
-//   maxrank: number; // 5
-//   cooldown: number[];
-//   cooldownBurn: string;
-//   cost: number[];
-//   costBurn: string;
-//   effect: (number | null)[][];
-//   effectBurn: string[];
-//   costType: string;
-//   maxammo: string;
-//   range: number[];
-//   rangeBurn: string;
-//   image: SpellImage; // 아래에 선언
-//   resource: string;
-// };
-
-// export type SpellImage = {
-//   full: string;
-//   sprite: string;
-//   group: string;
-//   x: number;
-//   y: number;
-//   w: number;
-//   h: number;
-// };
-
-// export type Leveltip = {
-//   label: string[]; // 재사용 대기시간...
-//   effect: string[]; // 쿨다운...
-// };
-
-// export type Passive = {
-//   name: string; // "사신 태세"
-//   description: string; // 패시브 스킬에 대한 설명인 듯
-//   image: PassiveImage; // 아래에 선언
-// };
-
-// export type PassiveImage = {
-//   full: string;
-//   sprite: string;
-//   group: string;
-//   x: number;
-//   y: number;
-//   w: number;
-//   h: number;
-// };

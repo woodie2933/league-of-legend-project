@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function NavBar() {
   return (
-    <nav className="bg-black w-screen fixed px-10">
+    <nav className="bg-black w-screen fixed px-10 z-50">
       <div className="container flex justify-between items-center p-6">
         <Link href="/" className="text-3xl font-bold text-white">
           League of Legend
