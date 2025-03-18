@@ -38,6 +38,7 @@ export default function RotationPage() {
   if (!rotation) return <p>로딩 중...</p>;
   if (error) return <p>오류 발생: {error}</p>;
 
+  // 전체 챔피언 리스트에서 로테이션 리스트 추출
   const freeChampions = champions.filter((champion) =>
     rotation.freeChampionIds.includes(Number(champion.key))
   );

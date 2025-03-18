@@ -2,6 +2,7 @@ import ChampionCard from "@/components/list/ChampionCard";
 import { Champion } from "@/types/Champion";
 import { fetchChampionList } from "@/utils/serverApi/champions";
 
+// 정기적 업데이트
 export const revalidate = 86400;
 
 export default async function ChampionsPage() {

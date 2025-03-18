@@ -79,6 +79,7 @@ export default async function ChampionDetailPage({
                 </div>
               </div>
             </div>
+            {/* 패시브 */}
             <div className="z-10 w-3/6 space-y-3 flex justify-between items-end gap-10">
               <div className="border border-s border-white border-opacity-30 rounded-lg flex flex-col items-center p-3">
                 <Image
@@ -92,6 +93,7 @@ export default async function ChampionDetailPage({
                   {champion.passive.name}
                 </h3>
               </div>
+              {/* 팁 */}
               <div className="flex flex-col gap-3">
                 {champion.allytips.map((allytip) => (
                   <div
