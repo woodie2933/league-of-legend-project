@@ -49,7 +49,6 @@ export type ChampionDetail = {
   stats: ChampionStats; // 아래에 선언
   spells: Spell[]; // 아래에 선언
   passive: Passive; // 아래에 선언
-  recommended: any[];
 };
 
 export type Skin = {
