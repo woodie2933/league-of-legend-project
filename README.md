@@ -20,11 +20,11 @@ Riot Games API를 활용하여 League of Legends의 챔피언, 아이템, 금주
 
 ## :paperclip: Git Address
 
-https://github.com/woodie2933/pokemon-project.git
+https://github.com/woodie2933/league-of-legend-project.git
 
 ## :paperclip: 배포 URL
 
-https://pokemon-project-five-beta.vercel.app/
+[league-of-legend-project-1.vercel.app/](https://league-of-legend-project-1.vercel.app/)
 
 <br/>
 
